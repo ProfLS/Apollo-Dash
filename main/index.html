@@ -7,33 +7,41 @@
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
-</head>
 <body>
     <header>
-        <h1>Apollo Dash</h1>
+        <h1><em>Apollo Dash</em></h1>
         <button id="login-btn">Login</button>
     </header>
-    <main>
-        <div class="dashboard">
-            <div class="metrics">
-                <div class="metric" data-target="heart">Heart Rate</div>
-                <div class="metric" data-target="bp">Blood Pressure</div>
-                <div class="metric" data-target="steps">Steps</div>
-                <div class="metric" data-target="sleep">Sleep</div>
-                <div class="metric" data-target="calories">Calories Burned</div>
-            </div>
-            <div class="human-container">
-                <img src="human-diagram.png" alt="Human Diagram" id="human-diagram">
-            </div>
-            <div class="metric-details" id="metric-details">
-                <h2 id="metric-title">Select a metric</h2>
-                <p id="metric-info">Hover or click on a metric to see details.</p>
-            </div>
+
+    <main class="dashboard-container">
+        <div class="metrics left-metrics">
+            <div class="metric" data-target="heart">Heart Rate</div>
+            <div class="metric" data-target="bp">Blood Pressure</div>
+            <div class="metric" data-target="steps">Steps</div>
+            <div class="metric" data-target="sleep">Sleep</div>
+            <div class="metric" data-target="calories">Calories Burned</div>
+        </div>
+
+        <div class="human-container">
+            <img src="human-diagram.png" alt="Human Diagram" id="human-diagram">
+        </div>
+
+        <div class="metrics right-metrics">
+            <div class="metric" data-target="Planner">Planner</div>
+            <div class="metric" data-target="weight">Weight</div>
+            <div class="metric" data-target="reminders">Reminders</div>
+            <div class="metric" data-target="prescriptions">Prescriptions</div>
+            <div class="metric" data-target="appointments">Appointments</div>
         </div>
     </main>
+
+    <div class="metric-details" id="metric-details">
+        <h2 id="metric-title">Select a metric</h2>
+        <p id="metric-info">Hover or click on a metric to see details.</p>
+    </div>
+
     <footer>
         <p>&copy; 2025 Apollo Dash</p>
     </footer>
-</body>
 </body>
 </html>

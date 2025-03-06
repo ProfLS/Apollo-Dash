@@ -1,74 +1,102 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #384D59;
-    color: white;
+/* General Styles */
+body, html {
     margin: 0;
     padding: 0;
-    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
 }
+
 header {
-    background-color: #293740;
-    padding: 15px;
+    background: #a63c3c;
+    color: white;
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    border: #700c0c 3px solid;
 }
+
 header h1 {
     margin: 0;
-    font-size: 1.8em;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 #login-btn {
-    background-color: #5DA63C;
-    color: white;
+    background: white;
     border: none;
-    padding: 10px 20px;
+    padding: 10px;
     cursor: pointer;
-    transition: background 0.3s;
-    border-radius: 5px;
 }
-#login-btn:hover {
-    background-color: #6CBF45;
-}
-.dashboard {
+
+/* Main Container */
+.dashboard-container {
     display: flex;
-    justify-content: space-around;
+    flex-grow: 1;
     align-items: center;
-    margin-top: 50px;
-    position: relative;
-    transition: all 0.5s ease-in-out;
+    justify-content: space-between;
+    padding: 20px;
 }
+
+/* Metrics Sections */
 .metrics {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    width: 20%;
 }
+
+.left-metrics {
+    align-items: flex-end;
+    text-align: right;
+}
+
+.right-metrics {
+    align-items: flex-start;
+    text-align: left;
+}
+
 .metric {
-    background-color: #5DA63C;
-    padding: 10px;
-    border-radius: 5px;
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
     cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
+    width: 80%;
+    text-align: center;
 }
+
 .metric:hover {
-    background-color: #6CBF45;
-    transform: scale(1.1);
+    background: #a63c3c;
+    color: white;
 }
-.human-container img {
-    width: 250px;
-    transition: transform 0.3s;
+
+/* Human Diagram */
+.human-container {
+    width: 30%;
+    display: flex;
+    justify-content: center;
 }
+
+#human-diagram {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Metric Details */
 .metric-details {
-    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
     padding: 20px;
-    border-radius: 10px;
-    display: none;
-    position: absolute;
-    bottom: -100px;
-    transition: opacity 0.3s ease-in-out;
 }
+
+/* Footer Fixed to Bottom */
 footer {
-    background-color: #293740;
+    background: #a63c3c;
+    color: white;
+    text-align: center;
     padding: 10px;
-    margin-top: 50px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border: #700c0c 3px solid
 }
