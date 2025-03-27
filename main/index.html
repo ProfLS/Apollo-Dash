@@ -9,29 +9,38 @@
 </head>
 <body>
     <header>
-        <h1><em>Apollo Dash</em></h1>
-        <button id="login-btn">Login</button>
+        <div style="display:flex; gap:30px;">
+            <img src="public/logo.png" alt="Apollo Dash Logo" class="logo" />
+            <h1>Apollo Dash</h1>
+        </div>
+        <div class="header-buttons">
+          <button id="login-btn">Login</button>
+          <label class="toggle-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+          </label>
+        </div>
     </header>
 
     <main class="dashboard-container">
         <div class="metrics left-metrics">
-            <div class="metric" data-target="heart">Heart Rate</div>
-            <div class="metric" data-target="bp">Blood Pressure</div>
-            <div class="metric" data-target="steps">Steps</div>
-            <div class="metric" data-target="sleep">Sleep</div>
-            <div class="metric" data-target="calories">Calories Burned</div>
+            <div class="metric" data-target="heart" data-metric-name="Heart Rate">Heart Rate</div>
+            <div class="metric" data-target="bp" data-metric-name="Blood Pressure">Blood Pressure</div>
+            <div class="metric" data-target="steps" data-metric-name="Steps">Steps</div>
+            <div class="metric" data-target="weight" data-metric-name="Weight">Weight</div>
+            <div class="metric" data-target="calories" data-metric-name="Calories Burned">Calories Burned</div>
         </div>
 
-        <div class="human-container">
-            <img src="human-diagram.png" alt="Human Diagram" id="human-diagram">
+        <div class="human-container" data-metric-zone="true">
+            <img src="public/human_diagram.png" alt="Human Diagram" id="human-diagram">
         </div>
 
         <div class="metrics right-metrics">
-            <div class="metric" data-target="Planner">Planner</div>
-            <div class="metric" data-target="weight">Weight</div>
-            <div class="metric" data-target="reminders">Reminders</div>
-            <div class="metric" data-target="prescriptions">Prescriptions</div>
-            <div class="metric" data-target="appointments">Appointments</div>
+            <div class="metric" data-target="Planner" data-metric-name="Planner">Planner</div>
+            <div class="metric" data-target="sleep" data-metric-name="Sleep Log">Sleep Log</div>
+            <div class="metric" data-target="reminders" data-metric-name="Reminders">Reminders</div>
+            <div class="metric" data-target="prescriptions" data-metric-name="Perscriptions">Prescriptions</div>
+            <div class="metric" data-target="appointments" data-metric-name="Appointments">Appointments</div>
         </div>
     </main>
 
