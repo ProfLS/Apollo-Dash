@@ -17,7 +17,7 @@ function highlightMetric(index) {
   }
 }
 
-// Highlight butoons on hover
+// Highlight buttons on hover
 diagram.addEventListener('mouseenter', () => {
   const heartMetric = document.querySelector('[data-target="heart"]');
   metricElements.forEach(m => m.classList.remove('active'));
