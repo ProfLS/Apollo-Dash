@@ -10,11 +10,12 @@
 <body>
     <header>
         <div style="display:flex; gap:30px;">
-            <img src="public/logo.png" alt="Apollo Dash Logo" class="logo" />
+            <img src="logo.png" alt="Apollo Dash Logo" class="logo" />
             <h1>Apollo Dash</h1>
         </div>
         <div class="header-buttons">
           <button id="login-btn">Login</button>
+          <button id="signup-btn">Sign Up</button>
           <label class="toggle-switch">
             <input type="checkbox" id="theme-toggle">
             <span class="slider"></span>
@@ -32,7 +33,7 @@
         </div>
 
         <div class="human-container" data-metric-zone="true">
-            <img src="public/human_diagram.png" alt="Human Diagram" id="human-diagram">
+            <img src="human_diagram.png" alt="Human Diagram" id="human-diagram">
         </div>
 
         <div class="metrics right-metrics">
@@ -59,6 +60,15 @@
                 <button id="close-modal">Close</button>
             </div>
         </div>
+        <div id="signup-modal" class="modal">
+            <div class="modal-content">
+              <h2>Sign Up</h2>
+              <input type="text" id="signup-username" placeholder="Username" required>
+              <input type="password" id="signup-password" placeholder="Password" required>
+              <button id="submit-signup">Sign Up</button>
+              <button id="close-signup-modal">Close</button>
+            </div>
+          </div>
 
     <footer>
         <p>&copy; 2025 Apollo Dash</p>

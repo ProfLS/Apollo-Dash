@@ -599,3 +599,39 @@ function showAppointments() {
     </div>
   `).join('');
 }
+
+// Show signup modal
+document.getElementById('signup-btn').addEventListener('click', () => {
+  document.getElementById('signup-modal').style.display = 'block';
+});
+
+// Close signup modal
+document.getElementById('close-signup-modal').addEventListener('click', () => {
+  document.getElementById('signup-modal').style.display = 'none';
+});
+
+// Submit signup form
+document.getElementById('submit-signup').addEventListener('click', async () => {
+  const username = document.getElementById('signup-username').value;
+  const password = document.getElementById('signup-password').value;
+
+  if (username && password) {
+    try {
+      const response = await fetch('http://localhost:5000/api/auth/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const data = await response.json();
+      alert(data.message);
+      if (response.ok) {
+        document.getElementById('signup-modal').style.display = 'none';
+      }
+    } catch (err) {
+      alert('Error signing up');
+    }
+  } else {
+    alert('Please fill in both fields');
+  }
+});
